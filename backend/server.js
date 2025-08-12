@@ -2,12 +2,16 @@
 const express = require('express')
 require('dotenv').config()
 const { GoogleGenAI } = require('@google/genai')
+const cors = require('cors')
 
 const app = express()
 const port = process.env.PORT || 3000
 
 // Access API Key as an environment variable
 const genAI = new GoogleGenAI({})
+
+// Configure CORS to allow requests from FE origin
+app.use(cors())
 
 // Middleware to parse JSON bodies
 app.use(express.json())
