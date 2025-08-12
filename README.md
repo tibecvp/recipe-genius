@@ -13,7 +13,8 @@ Before you begin, ensure you have the following software installed on your machi
 - Node.js: https://nodejs.org/
 - npm: (Comes with Node.js)
 - Git: https://git-scm.com/
-You will also need a Google API key for the Gemini API, which you can obtain from the Google AI Studio.
+
+You will also need a Google API key for the [Gemini API](https://aistudio.google.com/u/1/apikey), which you can obtain from the Google AI Studio.
 
 ## Getting Started
 1. Clone the repository:
@@ -24,7 +25,7 @@ You will also need a Google API key for the Gemini API, which you can obtain fro
 2. Set up the environment variables:
     - Navigate to the ``backend`` directory: ``cd backend``
     - Create a ``.env`` file in the ``backend`` directory.
-    - Add your Google API key to the file:
+    - Add your Google API key to the file: (https://aistudio.google.com/u/1/apikey Login with a Google account and create an API key if you don't have one yet.)
         ```
         GEMINI_API_KEY=<YOUR_GOOGLE_API_KEY>
         ```
