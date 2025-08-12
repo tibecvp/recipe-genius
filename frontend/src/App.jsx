@@ -59,7 +59,7 @@ function App() {
         flex-col
         items-center
         justify-center
-        p-4
+        p-12
       '
     >
       <div

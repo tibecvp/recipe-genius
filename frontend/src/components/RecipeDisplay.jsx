@@ -4,18 +4,18 @@ function RecipeDisplay({ recipe }) {
         <div
             className="
                 mt-8 
-                bg-green-50
+                bg-gray-900
                 p-6
                 rounded-lg
                 shadow-inner
-                border-green-200
+                border-gray-200
             "
         >
             <h2
                 className="
                     text-3xl
                     font-bold
-                    text-green-800
+                    text-gray-200
                     mb-4
                 "
             >{recipe.title}</h2>
@@ -26,7 +26,7 @@ function RecipeDisplay({ recipe }) {
                     md:grid-gols-3
                     gap-4
                     mb-6
-                    text-gray-700
+                    text-gray-400
                 "
             >
                 <p><strong className="font-semibold">Yields:</strong> {recipe.yields}</p>
@@ -38,7 +38,7 @@ function RecipeDisplay({ recipe }) {
                 className="
                     text-2xl
                     font-semibold
-                    text-gray-800
+                    text-gray-200
                     mb-3
                 "
             >Ingredients:</h3>
@@ -47,7 +47,7 @@ function RecipeDisplay({ recipe }) {
                     list-disc
                     pl-4
                     space-y-1
-                    text-gray-700
+                    text-gray-400
                     mb-6
                 "
             >
@@ -60,7 +60,7 @@ function RecipeDisplay({ recipe }) {
                 className="
                     text-2xl
                     font-semibold
-                    text-gray-800
+                    text-gray-200
                     mb-3
                 "
             >Instructions:</h3>
@@ -69,14 +69,15 @@ function RecipeDisplay({ recipe }) {
                     list-decimal
                     pl-4
                     space-y-3
-                    text-gray-700
+                    text-gray-400
                 "
             >
                 {recipe.instructions.map((instruction, index) => (
                     <li key={index} className="mb-2">
-                        <strong className="font-semibold text-gray-900">
+                        <strong className="font-semibold text-gray-200">
                             {instruction.title}
-                        </strong> {instruction.description}
+                        </strong><br />
+                        {instruction.description}
                     </li>
                 ))}
             </ol>
