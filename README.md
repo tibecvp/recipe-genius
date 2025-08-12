@@ -87,11 +87,31 @@ This endpoint generates a recipe using the Gemini API based on a list of ingredi
     - Status 400 Bad Request: If the ``ingredients`` array is missing.
     - Status 500 Internal Server Error: If there is an issue with the API or parsing the response.
 
+**CORS Configuration:** 
+The backend is configured to handle Cross-Origin Resource Sharing (CORS) requests. In development, it allows all origins. For production, it's recommended to restrict this to your frontend's specific domain for security.
+
 ## Frontend Setup
-(This section can be updated once the frontend is implemented)
-1. Navigate to the frontend directory: cd ../frontend
-2. Install dependencies: npm install
-3. Run the application: npm start
+1. Navigate to the ``frontend`` directory: 
+    ```
+    cd ../frontend
+    ```
+2. Install dependencies:
+    ```
+    npm install
+    ```
+    This will install React, Vite, and other necessary packages, including ``axios`` (or ``fetch`` is used natively in ``App.jsx``).
+3. Set up frontend environment variables:
+    - Create a ``.env`` file in the ``frontend`` directory.
+    - Add your backend server's URL. If your backend is running locally, it will look like this:
+    ````
+    VITE_BACKEND_URL=http://localhost:3000
+    ```
+    - When deployed, this should be the public URL of your backend.
+4. Run the frontend development server:
+    ````
+    npm run dev
+    ```
+    The frontend will typically start on ``http://localhost:5173``.
 
 ## Deployment
 The application is deployed manually to an Amazon EC2 instance. The process involves SSHing into the instance, cloning the repository, installing dependencies, and running the backend server and a web server (like Nginx) to serve the frontend.
