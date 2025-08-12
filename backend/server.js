@@ -14,7 +14,7 @@ app.use(express.json())
 
 // Test route to check if the server is running
 app.get('/', (req, res) => {
-    res.send('RecipeGnius Backend is up and running!')
+    res.send('RecipeGenius Backend is up and running!')
 })
 
 // Endpoint to generate a recipe
