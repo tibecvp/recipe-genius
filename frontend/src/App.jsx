@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import RecipeForm from './components/RecipeForm'
 import RecipeDisplay from './components/RecipeDisplay'
+import Logo from './components/Logo'
 
 function App() {
   const [ingredients, setIngredients] = useState('')
@@ -89,11 +90,7 @@ function App() {
             tracking-tight
           '
         >
-          <img
-            src="/src/assets/recipe-genius.svg"
-            alt="Recipe Genius Logo"
-            className='w-10'
-          />
+          <Logo className="w-4" />
           RecipeGenius
         </h1>
 
