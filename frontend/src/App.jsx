@@ -90,7 +90,7 @@ function App() {
           '
         >
           <img
-            src="./src/assets/recipe-genius.svg"
+            src="/src/assets/recipe-genius.svg"
             alt="Recipe Genius Logo"
             className='w-10'
           />
